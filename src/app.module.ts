@@ -3,9 +3,10 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { APP_GUARD } from '@nestjs/core';
 import { AuthGuard } from './app.guard';
+import { DashboardModule } from './microservices/dashboard/dashboard.module';
 
 @Module({
-  imports: [],
+  imports: [DashboardModule],
   controllers: [AppController],
   providers: [
     AppService,
